@@ -6,8 +6,11 @@
 </head>
 <body>
   <h3>Coding events STL</h3>
+    <p th:unless ="${events} and${events.size()}">No Events</p>
   <ul>
-    <li th:each="event : ${events}" th:text="${event}"></li>
+      <th:block th:each="event : ${events}">
+        <li th:text="${event}"></li>
+      </th:block>
   </ul>
 </body>
 </html>
